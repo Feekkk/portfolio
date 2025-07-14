@@ -339,7 +339,7 @@ const Home = () => {
                                                 <div className="p-3 bg-gradient-to-r from-stone-700 to-stone-600 rounded-xl group-hover:scale-110 transition-transform">
                                                     <skill.icon className="w-6 h-6 text-white" />
                                                 </div>
-                                                <CardTitle className="text-xl group-hover:text-stone-600 transition-colors">
+                                                <CardTitle className="text-xl text-black group-hover:text-stone-600 transition-colors">
                                                     {skill.name}
                                                 </CardTitle>
                                             </div>
