@@ -3,7 +3,6 @@ import { Badge } from "../components/ui/badge";
 import { Button } from "../components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar";
-import { ThemeToggle } from "../components/ui/theme-toggle";
 import {
     Github,
     Linkedin,
@@ -25,7 +24,6 @@ import {
     Trophy,
     Crown
 } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const Home = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -86,12 +84,12 @@ const Home = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-800">
+        <div className="min-h-screen" style={{background: 'linear-gradient(to bottom right, #F2F2F2, #EAE4D5, #B6B09F)'}}>
             {/* Navigation */}
-            <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-950/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+            <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
                 <div className="container mx-auto px-4 sm:px-6 py-4">
                     <div className="flex items-center justify-between">
-                        <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                        <div className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-stone-800 to-stone-600 bg-clip-text text-transparent">
 
                         </div>
 
@@ -99,19 +97,19 @@ const Home = () => {
                         <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
                             <button
                                 onClick={() => scrollToSection('hero')}
-                                className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
+                                className="text-gray-600 hover:text-gray-900 transition-colors"
                             >
                                 Home
                             </button>
                             <button
                                 onClick={() => scrollToSection('about')}
-                                className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
+                                className="text-gray-600 hover:text-gray-900 transition-colors"
                             >
                                 About
                             </button>
                             <button
                                 onClick={() => scrollToSection('projects')}
-                                className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
+                                className="text-gray-600 hover:text-gray-900 transition-colors"
                             >
                                 Projects
                             </button>
@@ -121,12 +119,10 @@ const Home = () => {
                                     Contact
                                 </Button>
                             </a>
-                            <ThemeToggle />
                         </div>
 
                         {/* Mobile Navigation Toggle */}
                         <div className="flex items-center space-x-3 md:hidden">
-                            <ThemeToggle />
                             <Button
                                 variant="ghost"
                                 size="sm"
@@ -136,39 +132,37 @@ const Home = () => {
                                 {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
                             </Button>
                         </div>
-                    </div>
-
-                    {/* Mobile Menu */}
-                    {mobileMenuOpen && (
-                        <div className="md:hidden mt-4 pb-4 border-t border-gray-200 dark:border-gray-700">
-                            <div className="flex flex-col space-y-4 pt-4">
-                                <button
-                                    onClick={() => scrollToSection('hero')}
-                                    className="text-left text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors py-2"
-                                >
-                                    Home
-                                </button>
-                                <button
-                                    onClick={() => scrollToSection('about')}
-                                    className="text-left text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors py-2"
-                                >
-                                    About
-                                </button>
-                                <button
-                                    onClick={() => scrollToSection('projects')}
-                                    className="text-left text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors py-2"
-                                >
-                                    Projects
-                                </button>
-                                <a href="mailto:wanafiq.d03@gmail.com">
-                                    <Button variant="outline" size="sm" className="justify-start w-fit">
-                                        <Mail className="w-4 h-4 mr-2" />
-                                        Contact
-                                    </Button>
-                                </a>
+                    </div>                        {/* Mobile Menu */}
+                        {mobileMenuOpen && (
+                            <div className="md:hidden mt-4 pb-4 border-t border-gray-200">
+                                <div className="flex flex-col space-y-4 pt-4">
+                                    <button
+                                        onClick={() => scrollToSection('hero')}
+                                        className="text-left text-gray-600 hover:text-gray-900 transition-colors py-2"
+                                    >
+                                        Home
+                                    </button>
+                                    <button
+                                        onClick={() => scrollToSection('about')}
+                                        className="text-left text-gray-600 hover:text-gray-900 transition-colors py-2"
+                                    >
+                                        About
+                                    </button>
+                                    <button
+                                        onClick={() => scrollToSection('projects')}
+                                        className="text-left text-gray-600 hover:text-gray-900 transition-colors py-2"
+                                    >
+                                        Projects
+                                    </button>
+                                    <a href="mailto:wanafiq.d03@gmail.com">
+                                        <Button variant="outline" size="sm" className="justify-start w-fit">
+                                            <Mail className="w-4 h-4 mr-2" />
+                                            Contact
+                                        </Button>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                    )}
+                        )}
                 </div>
             </nav>
 
@@ -182,26 +176,26 @@ const Home = () => {
                                     <Calendar className="w-3 h-3 mr-1" />
                                     Available for internship
                                 </Badge>
-                                <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 dark:text-white leading-tight">
+                                <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight">
                                     Hi, I'm{" "}
-                                    <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                                    <span className="bg-gradient-to-r from-stone-800 via-stone-700 to-stone-600 bg-clip-text text-transparent">
                                         AFIQ
                                     </span>
                                 </h1>
-                                <h2 className="text-lg sm:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 font-light">
+                                <h2 className="text-lg sm:text-xl lg:text-2xl text-gray-600 font-light">
                                     Full-Stack Developer
                                 </h2>
-                                <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+                                <p className="text-base sm:text-lg text-gray-600 max-w-lg mx-auto lg:mx-0 leading-relaxed">
                                     I collect tech stacks like Pokémon cards. Web2, Database, Cloud Computing, AI — gotta code 'em all!
                                 </p>
-                                <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+                                <p className="text-base sm:text-lg text-gray-600 max-w-lg mx-auto lg:mx-0 leading-relaxed">
                                     "Warning: This developer requires regular coffee updates to function properly ⚠️"
                                 </p>
                             </div>
 
                             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
                                 <a href="/resume_real.pdf" download="Izhan_Resume.pdf">
-                                    <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+                                    <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-stone-800 to-stone-700 hover:from-stone-900 hover:to-stone-800 text-white">
                                         <Download className="w-4 h-4 mr-2" />
                                         Download Resume
                                     </Button>
@@ -213,13 +207,13 @@ const Home = () => {
                             </div>
 
                             <div className="flex items-center justify-center lg:justify-start space-x-6 pt-4">
-                                <a href="https://github.com/Feekkk" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors">
+                                <a href="https://github.com/Feekkk" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-stone-600 transition-colors">
                                     <Github className="w-6 h-6" />
                                 </a>
-                                <a href="www.linkedin.com/in/wanafiqdanial03" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors">
+                                <a href="www.linkedin.com/in/wanafiqdanial03" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-stone-600 transition-colors">
                                     <Linkedin className="w-6 h-6" />
                                 </a>
-                                <a href="mailto:wanafiq.d03@gmail.com" className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors">
+                                <a href="mailto:wanafiq.d03@gmail.com" className="text-gray-600 hover:text-stone-600 transition-colors">
                                     <Mail className="w-6 h-6" />
                                 </a>
                             </div>
@@ -227,8 +221,8 @@ const Home = () => {
 
                         <div className="flex justify-center lg:justify-end order-first lg:order-last">
                             <div className="relative">
-                                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur-xl opacity-30 animate-pulse"></div>
-                                <Avatar className="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 border-4 border-white dark:border-gray-800 shadow-2xl relative z-10">
+                                <div className="absolute inset-0 bg-gradient-to-r from-stone-800 to-stone-600 rounded-full blur-xl opacity-30 animate-pulse"></div>
+                                <Avatar className="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 border-4 border-white shadow-2xl relative z-10">
                                     <AvatarImage
                                         src="/pfp.jpg"
                                         alt="Profile"
@@ -253,20 +247,20 @@ const Home = () => {
             </section>
 
             {/* About Section */}
-            <section id="about" className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-950">
+            <section id="about" className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6" style={{background: 'linear-gradient(to bottom, #EAE4D5, #B6B09F)'}}>
                 <div className="container mx-auto max-w-6xl">
                     <div className="text-center mb-12 lg:mb-16">
                         <Badge variant="secondary" className="mb-4">
                             <MapPin className="w-3 h-3 mr-1" />
                             About Me
                         </Badge>
-                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
                             AI Architect, Data Sculptor,
-                            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent block sm:inline">
+                            <span className="bg-gradient-to-r from-stone-800 to-stone-600 bg-clip-text text-transparent block sm:inline">
                                 {" "}Full-Stack Wizard
                             </span>
                         </h2>
-                        <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                        <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
                             Stacking skills faster than certificates. Tech enthusiast with a serious case of "ooh, shiny new framework" syndrome.
                         </p>
                     </div>
@@ -274,43 +268,43 @@ const Home = () => {
                     <div className="space-y-12">
                         {/* Story Cards */}
                         <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-                            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-blue-200 dark:hover:border-blue-800">
+                            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-stone-300 bg-black text-white">
                                 <CardHeader className="text-center pb-4">
-                                    <div className="mx-auto w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                    <div className="mx-auto w-12 h-12 bg-gradient-to-r from-stone-700 to-stone-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                                         <Search className="w-6 h-6 text-white" />
                                     </div>
-                                    <CardTitle className="text-lg">Background Study</CardTitle>
+                                    <CardTitle className="text-lg text-white">Background Study</CardTitle>
                                 </CardHeader>
                                 <CardContent>
-                                    <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                    <p className="text-sm text-gray-300 leading-relaxed">
                                         Bachelor of Computer Science in Netcentric Computing from UiTM Jasin. Basically, I learned how to make computers talk to each other... and now they won't stop chatting!
                                     </p>
                                 </CardContent>
                             </Card>
 
-                            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-blue-200 dark:hover:border-blue-800">
+                            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-stone-300 bg-black text-white">
                                 <CardHeader className="text-center pb-4">
-                                    <div className="mx-auto w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                    <div className="mx-auto w-12 h-12 bg-gradient-to-r from-stone-600 to-stone-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                                         <Trophy className="w-6 h-6 text-white" />
                                     </div>
-                                    <CardTitle className="text-lg">Project Enthusiast</CardTitle>
+                                    <CardTitle className="text-lg text-white">Project Enthusiast</CardTitle>
                                 </CardHeader>
                                 <CardContent>
-                                    <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                    <p className="text-sm text-gray-300 leading-relaxed">
                                         I love building personal projects in my free time. From Mobile apps to Serverless architecture — if it can be coded, I've probably tried it and definitely bragged about it!
                                     </p>
                                 </CardContent>
                             </Card>
 
-                            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-blue-200 dark:hover:border-blue-800">
+                            <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-stone-300 bg-black text-white">
                                 <CardHeader className="text-center pb-4">
-                                    <div className="mx-auto w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                    <div className="mx-auto w-12 h-12 bg-gradient-to-r from-stone-800 to-stone-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                                         <Crown className="w-6 h-6 text-white" />
                                     </div>
-                                    <CardTitle className="text-lg">The Leader</CardTitle>
+                                    <CardTitle className="text-lg text-white">The Leader</CardTitle>
                                 </CardHeader>
                                 <CardContent>
-                                    <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                    <p className="text-sm text-gray-300 leading-relaxed">
                                         Secretariat of UiTM Jasin College Representative Committee. I kept the paperwork organized while secretly plotting tech world domination between meetings.
                                     </p>
                                 </CardContent>
@@ -320,23 +314,23 @@ const Home = () => {
                         {/* Skills Section */}
                         <div className="space-y-8">
                             <div className="text-center">
-                                <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                                <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
                                     Technical Arsenal
                                 </h3>
-                                <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                                <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
                                     The tools and technologies I wield to bring ideas to life
                                 </p>
                             </div>
 
                             <div className="grid md:grid-cols-2 gap-6">
                                 {skills.map((skill, index) => (
-                                    <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-blue-200 dark:hover:border-blue-800 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900">
+                                    <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-stone-300 bg-gradient-to-br from-white to-gray-50">
                                         <CardHeader className="pb-4">
                                             <div className="flex items-center space-x-3 mb-4">
-                                                <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl group-hover:scale-110 transition-transform">
+                                                <div className="p-3 bg-gradient-to-r from-stone-700 to-stone-600 rounded-xl group-hover:scale-110 transition-transform">
                                                     <skill.icon className="w-6 h-6 text-white" />
                                                 </div>
-                                                <CardTitle className="text-xl group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                                                <CardTitle className="text-xl group-hover:text-stone-600 transition-colors">
                                                     {skill.name}
                                                 </CardTitle>
                                             </div>
@@ -345,7 +339,7 @@ const Home = () => {
                                                     <Badge
                                                         key={itemIndex}
                                                         variant="secondary"
-                                                        className="text-xs hover:bg-blue-100 dark:hover:bg-blue-900 transition-colors cursor-default"
+                                                        className="text-xs hover:bg-stone-100 transition-colors cursor-default"
                                                     >
                                                         {item}
                                                     </Badge>
@@ -362,69 +356,107 @@ const Home = () => {
             </section>
 
             {/* Projects Section */}
-            <section id="projects" className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 bg-gray-50 dark:bg-gray-900">
+            <section id="projects" className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6" style={{background: '#B6B09F'}}>
                 <div className="container mx-auto max-w-6xl">
                     <div className="text-center mb-12 lg:mb-16">
-                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
                             Projects
                         </h2>
-                        <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                        <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
                             Keep grinding, stacking skills, and building things that make the world a better place. Here are some of my recent projects:
                         </p>
                     </div>
 
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-                        {projects.map((project, index) => (
-                            <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-blue-200 dark:hover:border-blue-800">
-                                <div className="relative overflow-hidden rounded-t-lg">
-                                    <img
-                                        src={project.image}
-                                        alt={project.title}
-                                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-                                    />
-                                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-                                </div>
-                                <CardHeader>
-                                    <CardTitle className="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors text-lg sm:text-xl">
-                                        {project.title}
-                                    </CardTitle>
-                                    <CardDescription className="line-clamp-3 text-sm sm:text-base">
-                                        {project.description}
-                                    </CardDescription>
-                                </CardHeader>
-                                <CardContent className="space-y-4">
-                                    <div className="flex flex-wrap gap-2">
-                                        {project.tech.map((tech, techIndex) => (
-                                            <Badge key={techIndex} variant="outline" className="text-xs">
-                                                {tech}
-                                            </Badge>
-                                        ))}
+                    {/* Scrolling Projects Carousel */}
+                    <div className="relative overflow-hidden">
+                        <div className="flex gap-6 animate-scroll">
+                            {/* First set of projects */}
+                            {projects.map((project, index) => (
+                                <Card key={`first-${index}`} className="flex-shrink-0 w-80 group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-stone-300">
+                                    <div className="relative overflow-hidden rounded-t-lg">
+                                        <img
+                                            src={project.image}
+                                            alt={project.title}
+                                            className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                                        />
+                                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
                                     </div>
-                                    <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-3">
-                                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-full sm:flex-1">
-                                            <Button variant="outline" size="sm" className="w-full">
-                                                <ExternalLink className="w-4 h-4 mr-2" />
-                                                Live Demo
-                                            </Button>
-                                        </a>
-                                        <a href={project.github} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                                            <Button variant="ghost" size="sm" className="w-full sm:w-auto">
-                                                <Github className="w-4 h-4" />
-                                            </Button>
-                                        </a>
+                                    <CardHeader>
+                                        <CardTitle className="group-hover:text-stone-600 transition-colors text-lg sm:text-xl">
+                                            {project.title}
+                                        </CardTitle>
+                                        <CardDescription className="line-clamp-3 text-sm sm:text-base">
+                                            {project.description}
+                                        </CardDescription>
+                                    </CardHeader>
+                                    <CardContent className="space-y-4">
+                                        <div className="flex flex-wrap gap-2">
+                                            {project.tech.map((tech, techIndex) => (
+                                                <Badge key={techIndex} variant="outline" className="text-xs">
+                                                    {tech}
+                                                </Badge>
+                                            ))}
+                                        </div>
+                                        <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-3">
+                                            <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-full sm:flex-1">
+                                                <Button variant="outline" size="sm" className="w-full">
+                                                    <ExternalLink className="w-4 h-4 mr-2" />
+                                                    Live Demo
+                                                </Button>
+                                            </a>
+                                            <a href={project.github} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                                                <Button variant="ghost" size="sm" className="w-full sm:w-auto">
+                                                    <Github className="w-4 h-4" />
+                                                </Button>
+                                            </a>
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            ))}
+                            {/* Duplicate set for seamless loop */}
+                            {projects.map((project, index) => (
+                                <Card key={`second-${index}`} className="flex-shrink-0 w-80 group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-2 hover:border-stone-300">
+                                    <div className="relative overflow-hidden rounded-t-lg">
+                                        <img
+                                            src={project.image}
+                                            alt={project.title}
+                                            className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                                        />
+                                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
                                     </div>
-                                </CardContent>
-                            </Card>
-                        ))}
-                    </div>
-
-                    <div className="text-center mt-8 lg:mt-12">
-                        <Link to="/project">
-                            <Button variant="outline" size="lg">
-                                View All Projects
-                                <ExternalLink className="w-4 h-4 ml-2" />
-                            </Button>
-                        </Link>
+                                    <CardHeader>
+                                        <CardTitle className="group-hover:text-stone-600 transition-colors text-lg sm:text-xl">
+                                            {project.title}
+                                        </CardTitle>
+                                        <CardDescription className="line-clamp-3 text-sm sm:text-base">
+                                            {project.description}
+                                        </CardDescription>
+                                    </CardHeader>
+                                    <CardContent className="space-y-4">
+                                        <div className="flex flex-wrap gap-2">
+                                            {project.tech.map((tech, techIndex) => (
+                                                <Badge key={techIndex} variant="outline" className="text-xs">
+                                                    {tech}
+                                                </Badge>
+                                            ))}
+                                        </div>
+                                        <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-3">
+                                            <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-full sm:flex-1">
+                                                <Button variant="outline" size="sm" className="w-full">
+                                                    <ExternalLink className="w-4 h-4 mr-2" />
+                                                    Live Demo
+                                                </Button>
+                                            </a>
+                                            <a href={project.github} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                                                <Button variant="ghost" size="sm" className="w-full sm:w-auto">
+                                                    <Github className="w-4 h-4" />
+                                                </Button>
+                                            </a>
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </section>
@@ -432,16 +464,16 @@ const Home = () => {
             {/* Contact Section */}
             <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6">
     <div className="container mx-auto max-w-4xl text-center">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Let's Build Something Amazing Together
         </h2>
-        <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-8 lg:mb-12 max-w-2xl mx-auto">
+        <p className="text-lg sm:text-xl text-gray-600 mb-8 lg:mb-12 max-w-2xl mx-auto">
             I'm always excited to collaborate on innovative projects and explore new opportunities. Whether you have a brilliant idea, need a dedicated developer, or just want to discuss the latest tech trends over coffee ☕
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
             <a href="mailto:wanafiq.d03@gmail.com">
-                <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+                <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-stone-800 to-stone-700 hover:from-stone-900 hover:to-stone-800 text-white">
                     <Mail className="w-5 h-5 mr-2" />
                     Get In Touch
                 </Button>
