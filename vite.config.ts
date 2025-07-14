@@ -6,9 +6,15 @@ import { defineConfig } from "vite";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  base: "/", // Important for GitHub Pages
+  build: {
+    outDir: "dist",
+    sourcemap: false,
+    minify: true,
+  },
   server: {
     port: 5175,
-    allowedHosts: ['me.sigmaniac.site']
+    allowedHosts: ['me.wnafiq.xyz']
   },
   resolve: {
     alias: {
