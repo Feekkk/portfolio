@@ -190,17 +190,17 @@ const Home = () => {
                                 <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 dark:text-white leading-tight">
                                     Hi, I'm{" "}
                                     <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                                        Izhan
+                                        AFIQ
                                     </span>
                                 </h1>
                                 <h2 className="text-lg sm:text-xl lg:text-2xl text-gray-600 dark:text-gray-300 font-light">
                                     Full-Stack Developer
                                 </h2>
                                 <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-lg mx-auto lg:mx-0 leading-relaxed">
-                                    Need a Web2 app? Done. Web3 smart contract? Easy. IoT device talking to the cloud? Built it yesterday. A robot that moves when you buy an NFT? On it.
+                                    I collect tech stacks like Pokémon cards. Web2, Database, Cloud Computing, AI — gotta code 'em all!
                                 </p>
                                 <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 max-w-lg mx-auto lg:mx-0 leading-relaxed">
-                                    I'm like nasi kandar —  a little bit of everything, somehow still delicious.
+                                    "Warning: This developer requires regular coffee updates to function properly ⚠️"
                                 </p>
                             </div>
 
@@ -218,16 +218,13 @@ const Home = () => {
                             </div>
 
                             <div className="flex items-center justify-center lg:justify-start space-x-6 pt-4">
-                                <a href="https://github.com/goodbyeO0" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors">
+                                <a href="https://github.com/Feekkk" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors">
                                     <Github className="w-6 h-6" />
                                 </a>
-                                <a href="https://www.linkedin.com/in/muhammad-izhan-zikry-mohd-hamdani-479a1027a/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors">
+                                <a href="www.linkedin.com/in/wanafiqdanial03" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors">
                                     <Linkedin className="w-6 h-6" />
                                 </a>
-                                <a href="https://x.com/izhann_nn" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors">
-                                    <Twitter className="w-6 h-6" />
-                                </a>
-                                <a href="mailto:izhanhamdani11@gmail.com" className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors">
+                                <a href="mailto:wanafiq.d03@gmail.com" className="text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors">
                                     <Mail className="w-6 h-6" />
                                 </a>
                             </div>
@@ -238,7 +235,7 @@ const Home = () => {
                                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur-xl opacity-30 animate-pulse"></div>
                                 <Avatar className="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 border-4 border-white dark:border-gray-800 shadow-2xl relative z-10">
                                     <AvatarImage
-                                        src="/gambarCool.jpg"
+                                        src="/pfp.jpg"
                                         alt="Profile"
                                         className="object-cover w-full h-full"
                                         style={{
@@ -269,13 +266,13 @@ const Home = () => {
                             About Me
                         </Badge>
                         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-                            Tech Generalist, Serial Builder,
+                            AI Architect, Data Sculptor,
                             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent block sm:inline">
-                                {" "}Hackathon Warrior
+                                {" "}Full-Stack Wizard
                             </span>
                         </h2>
                         <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-                            From Kuala Lumpur <span className="text-sm">🇲🇾</span> — Whether it's cloud, code, or circuits, if it runs on logic (or caffeine), I'm in.
+                            Stacking skills faster than certificates. Tech enthusiast with a serious case of "ooh, shiny new framework" syndrome.
                         </p>
                     </div>
 
@@ -287,11 +284,11 @@ const Home = () => {
                                     <div className="mx-auto w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                                         <Search className="w-6 h-6 text-white" />
                                     </div>
-                                    <CardTitle className="text-lg">The Explorer</CardTitle>
+                                    <CardTitle className="text-lg">Background Study</CardTitle>
                                 </CardHeader>
                                 <CardContent>
                                     <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                                        I got a Computer Science degree and immediately started collecting side quests: Web dev, blockchain, IoT, cloud, robotics... who needs free time anyway?
+                                        Bachelor of Computer Science in Netcentric Computing from UiTM Jasin. Basically, I learned how to make computers talk to each other... and now they won't stop chatting!
                                     </p>
                                 </CardContent>
                             </Card>
@@ -301,11 +298,11 @@ const Home = () => {
                                     <div className="mx-auto w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                                         <Trophy className="w-6 h-6 text-white" />
                                     </div>
-                                    <CardTitle className="text-lg">The Competitor</CardTitle>
+                                    <CardTitle className="text-lg">Project Enthusiast</CardTitle>
                                 </CardHeader>
                                 <CardContent>
                                     <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                                        I've joined a bunch of hackathons, and let's just say... I don't always compete, but when I do, I bring home trophies and bragging rights.
+                                        I love building personal projects in my free time. From Mobile apps to Serverless architecture — if it can be coded, I've probably tried it and definitely bragged about it!
                                     </p>
                                 </CardContent>
                             </Card>
@@ -319,7 +316,7 @@ const Home = () => {
                                 </CardHeader>
                                 <CardContent>
                                     <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                                        Former President of UiTM Blockchain Association. During my reign, I organized events, led nerdy revolutions, and probably broke some sleep records.
+                                        Secretariat of UiTM Jasin College Representative Committee. I kept the paperwork organized while secretly plotting tech world domination between meetings.
                                     </p>
                                 </CardContent>
                             </Card>
