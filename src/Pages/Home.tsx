@@ -6,7 +6,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar";
 import {
     Github,
     Linkedin,
-    Twitter,
     Mail,
     Download,
     ExternalLink,
@@ -19,7 +18,6 @@ import {
     X,
     Database,
     Layers,
-    Cpu,
     Search,
     Trophy,
     Crown
@@ -30,28 +28,39 @@ const Home = () => {
 
     const projects = [
         {
-            title: "Blocknogotchi",
-            description: "Blocknogotchi is a blockchain-based virtual pet game inspired by the classic Tamagotchi. Mint your own unique pet, care for it, and watch it grow!",
-            tech: ["NextJS", "Typescript", "Socket.io", "Blockchain", "Tailwind CSS"],
-            image: "/opencampus.png",
-            link: "https://www.blocknogotchi.fun/",
-            github: "https://github.com/Atan0707/UMHackathon2025"
+            title: "AI Agent",
+            description: "A powerful AI-driven activity recommendation system powered by React and Ollama",
+            tech: ["ReactJS", "Vite", "Ollama", "OpenAI API", "Tailwind CSS"],
+            image: "/ollama.png",
+            github: "https://github.com/Feekkk/react-AIagent"
         },
         {
-            title: "BlockCash",
-            description: "Revolutionizing Allowances: NFC Tags are the New Piggy Banks.",
-            tech: ["React Native", "Blockchain", "NFC"],
-            image: "/ethKL2024.png",
-            link: "https://devfolio.co/projects/blockcash-08ba",
-            github: "https://github.com/goodbyeO0/ethKL-letsgooo"
+            title: "Gmail Analyzer",
+            description: "Email analysis tool with gmail API integration",
+            tech: ["Python", "Gmail API"],
+            image: "/python.png",
+            github: "https://github.com/afiqq03/python-gmailanalyzer"
         },
         {
-            title: "Zakat Token",
-            description: "Convert zakat money into token which will then be credited to the recipients ID card",
-            tech: ["NextJS", "Typescript", "NFC", "Blockchain", "Tailwind CSS"],
-            image: "/umHacks.png",
-            link: "https://zakatchain.vercel.app/",
-            github: "https://github.com/Atan0707/UMHackathon2025"
+            title: "Stock Oracle",
+            description: "AI-Powered Stock Prediction Report Generator",
+            tech: ["ReactJS", "Javascript", "Vite", "Groq AI", "Polygon.io"],
+            image: "/polygon.png",
+            github: "https://github.com/Feekkk/AI-engineering"
+        },
+        {
+            title: "ToDo Application",
+            description: "Full-stack ToDo application with modern web app and RESTfukl API design",
+            tech: ["ReactJS", "NodeJS", "ExpressJS", "PostgreSQL",],
+            image: "/postgre.png",
+            github: "https://github.com/Feekkk/react-learningpostgre"
+        },
+        {
+            title: "NeighborHub Mobile Application",
+            description: "Full-stack Mobile Application with Flutter integration with Cloudflare and Digital Ocean",
+            tech: ["Flutter", "DigitalOcean", "Javascript", "Cloudflare",],
+            image: "/NeighborHub.png",
+            github: "https://github.com/Feekkk/react-learningpostgre"
         }
     ];
 
@@ -194,7 +203,7 @@ const Home = () => {
                             </div>
 
                             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
-                                <a href="/resume_real.pdf" download="Izhan_Resume.pdf">
+                                <a href="/resume_real.pdf" download="wanafiq_Resume.pdf">
                                     <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-stone-800 to-stone-700 hover:from-stone-900 hover:to-stone-800 text-white">
                                         <Download className="w-4 h-4 mr-2" />
                                         Download Resume
@@ -397,16 +406,11 @@ const Home = () => {
                                                 </Badge>
                                             ))}
                                         </div>
-                                        <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-3">
-                                            <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-full sm:flex-1">
+                                        <div className="flex justify-center">
+                                            <a href={project.github} target="_blank" rel="noopener noreferrer">
                                                 <Button variant="outline" size="sm" className="w-full">
-                                                    <ExternalLink className="w-4 h-4 mr-2" />
-                                                    Live Demo
-                                                </Button>
-                                            </a>
-                                            <a href={project.github} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                                                <Button variant="ghost" size="sm" className="w-full sm:w-auto">
-                                                    <Github className="w-4 h-4" />
+                                                    <Github className="w-4 h-4 mr-2" />
+                                                    View on GitHub
                                                 </Button>
                                             </a>
                                         </div>
@@ -440,16 +444,11 @@ const Home = () => {
                                                 </Badge>
                                             ))}
                                         </div>
-                                        <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-3">
-                                            <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-full sm:flex-1">
+                                        <div className="flex justify-center">
+                                            <a href={project.github} target="_blank" rel="noopener noreferrer">
                                                 <Button variant="outline" size="sm" className="w-full">
-                                                    <ExternalLink className="w-4 h-4 mr-2" />
-                                                    Live Demo
-                                                </Button>
-                                            </a>
-                                            <a href={project.github} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
-                                                <Button variant="ghost" size="sm" className="w-full sm:w-auto">
-                                                    <Github className="w-4 h-4" />
+                                                    <Github className="w-4 h-4 mr-2" />
+                                                    View on GitHub
                                                 </Button>
                                             </a>
                                         </div>
@@ -478,7 +477,7 @@ const Home = () => {
                     Get In Touch
                 </Button>
             </a>
-            <a href="/resume.pdf" download="Afiq_Resume.pdf">
+            <a href="/resume.pdf" download="wanafiq_Resume.pdf">
                 <Button variant="outline" size="lg" className="w-full sm:w-auto">
                     <Download className="w-5 h-5 mr-2" />
                     Download Resume
