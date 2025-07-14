@@ -6,20 +6,14 @@ import { defineConfig } from "vite";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: "/", // Important for GitHub Pages
   build: {
     outDir: "dist",
     sourcemap: false,
     minify: true,
-    rollupOptions: {
-      output: {
-        manualChunks: undefined,
-      }
-    }
   },
   server: {
     port: 5175,
-    allowedHosts: ['me.wnafiq.xyz']
+    allowedHosts: ['me.wnafiq.xyz', 'localhost']
   },
   resolve: {
     alias: {
