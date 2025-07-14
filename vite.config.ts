@@ -11,6 +11,11 @@ export default defineConfig({
     outDir: "dist",
     sourcemap: false,
     minify: true,
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      }
+    }
   },
   server: {
     port: 5175,
