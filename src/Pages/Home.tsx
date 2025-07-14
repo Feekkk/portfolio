@@ -61,27 +61,22 @@ const Home = () => {
         {
             name: "Programming Languages",
             icon: Code2,
-            items: ["JavaScript", "PHP", "Java", "C++", "Python", "Rust", "Solidity", "Dart"]
+            items: ["JavaScript", "PHP", "Java", "C++", "Python", "Dart"]
         },
         {
             name: "Frameworks and Technologies",
             icon: Layers,
-            items: ["NextJS", "ViteJS", "React Native", "Flutter", "Laravel", "Hardhat", "Flowise AI", "Prisma ORM"]
+            items: ["ReactJS", "Flutter", "Laravel", "Flowise AI", "Prisma ORM"]
         },
         {
             name: "Databases",
             icon: Database,
-            items: ["MySQL", "PostgreSQL", "MongoDB", "Firebase", "Supabase", "AWS", "Blockchain"]
-        },
-        {
-            name: "Hardware",
-            icon: Cpu,
-            items: ["Raspberry Pi", "ESP32", "Arduino"]
+            items: ["MySQL", "PostgreSQL", "MongoDB", "Firebase", "Supabase", "AWS", "CloudFlare", "Digital Ocean"]
         },
         {
             name: "Tools",
             icon: Rocket,
-            items: ["Git", "GitHub", "Postman", "Docker", "Cisco Packet Tracer", "VMware", "VSCode", "CursorAI", "Remix IDE", "Solana Playground", "Android Studio"]
+            items: ["Git", "GitHub", "Postman", "Docker", "Cisco Packet Tracer", "VMware", "VSCode", "CursorAI", "Android Studio"]
         }
     ];
 
@@ -120,7 +115,7 @@ const Home = () => {
                             >
                                 Projects
                             </button>
-                            <a href="mailto:izhanhamdani11@gmail.com">
+                            <a href="mailto:wanafiq.d03@gmail.com">
                                 <Button variant="outline" size="sm">
                                     <Mail className="w-4 h-4 mr-2" />
                                     Contact
@@ -165,7 +160,7 @@ const Home = () => {
                                 >
                                     Projects
                                 </button>
-                                <a href="mailto:izhanhamdani11@gmail.com">
+                                <a href="mailto:wanafiq.d03@gmail.com">
                                     <Button variant="outline" size="sm" className="justify-start w-fit">
                                         <Mail className="w-4 h-4 mr-2" />
                                         Contact
@@ -374,7 +369,7 @@ const Home = () => {
                             Projects
                         </h2>
                         <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-                            Things I Made While Avoiding Assignments
+                            Keep grinding, stacking skills, and building things that make the world a better place. Here are some of my recent projects:
                         </p>
                     </div>
 
@@ -436,30 +431,30 @@ const Home = () => {
 
             {/* Contact Section */}
             <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6">
-                <div className="container mx-auto max-w-4xl text-center">
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-                        Wanna Build Cool Stuff Together?
-                    </h2>
-                    <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-8 lg:mb-12 max-w-2xl mx-auto">
-                        I'm always up for new adventures in tech. If you've got an idea, a project, or just want to nerd out.
-                    </p>
+    <div className="container mx-auto max-w-4xl text-center">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            Let's Build Something Amazing Together
+        </h2>
+        <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-8 lg:mb-12 max-w-2xl mx-auto">
+            I'm always excited to collaborate on innovative projects and explore new opportunities. Whether you have a brilliant idea, need a dedicated developer, or just want to discuss the latest tech trends over coffee ☕
+        </p>
 
-                    <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-                        <a href="mailto:izhanhamdani11@gmail.com">
-                            <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
-                                <Mail className="w-5 h-5 mr-2" />
-                                Get In Touch
-                            </Button>
-                        </a>
-                        <a href="/resume_real.pdf" download="Izhan_Resume.pdf">
-                            <Button variant="outline" size="lg" className="w-full sm:w-auto">
-                                <Download className="w-5 h-5 mr-2" />
-                                Download Resume
-                            </Button>
-                        </a>
-                    </div>
-                </div>
-            </section>
+        <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+            <a href="mailto:wanafiq.d03@gmail.com">
+                <Button size="lg" className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+                    <Mail className="w-5 h-5 mr-2" />
+                    Get In Touch
+                </Button>
+            </a>
+            <a href="/resume.pdf" download="Afiq_Resume.pdf">
+                <Button variant="outline" size="lg" className="w-full sm:w-auto">
+                    <Download className="w-5 h-5 mr-2" />
+                    Download Resume
+                </Button>
+            </a>
+        </div>
+    </div>
+</section>
         </div>
     );
 };
