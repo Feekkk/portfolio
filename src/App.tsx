@@ -6,30 +6,33 @@ import WelcomeScreen from "./components/WelcomeScreen";
 
 function App() {
   const [showWelcome, setShowWelcome] = useState(true);
+  const [showHome, setShowHome] = useState(false);
 
   useEffect(() => {
-    // Check if user has visited before
-    const hasVisited = localStorage.getItem('hasVisitedPortfolio');
-    
-    if (hasVisited) {
-      setShowWelcome(false);
-    }
+    // Always show welcome screen on page load/refresh
+    setShowWelcome(true);
+    setShowHome(false);
   }, []);
 
   const handleWelcomeComplete = () => {
-    localStorage.setItem('hasVisitedPortfolio', 'true');
     setShowWelcome(false);
+    // Slight delay to ensure smooth transition
+    setTimeout(() => {
+      setShowHome(true);
+    }, 200);
   };
 
   return (
     <ThemeProvider defaultTheme="system" storageKey="portfolio-ui-theme">
       {showWelcome && <WelcomeScreen onComplete={handleWelcomeComplete} />}
-      {!showWelcome && (
-        <Router>
-          <Routes>
-            <Route path="/" element={<Home />} />
-          </Routes>
-        </Router>
+      {showHome && (
+        <div className="animate-fade-in">
+          <Router>
+            <Routes>
+              <Route path="/" element={<Home />} />
+            </Routes>
+          </Router>
+        </div>
       )}
     </ThemeProvider>
   );

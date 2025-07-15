@@ -105,17 +105,17 @@ const Home = () => {
         {
             name: "Frameworks and Technologies",
             icon: Layers,
-            items: ["ReactJS", "Flutter", "Laravel", "Flowise AI", "Prisma ORM"]
+            items: ["ReactJS", "Flutter", "Laravel", "Flowise AI", "Prisma ORM", "AWS", "Digital Ocean"]
         },
         {
             name: "Databases",
             icon: Database,
-            items: ["MySQL", "PostgreSQL", "MongoDB", "Firebase", "Supabase", "AWS", "CloudFlare", "Digital Ocean"]
+            items: ["MySQL", "PostgreSQL", "MongoDB", "Firebase", "Supabase"]
         },
         {
             name: "Tools",
             icon: Rocket,
-            items: ["Git", "GitHub", "Postman", "Docker", "Cisco Packet Tracer", "VMware", "VSCode", "CursorAI", "Android Studio"]
+            items: ["Git", "GitHub", "Postman", "Docker", "Cisco Packet Tracer", "VMware", "VSCode", "CursorAI", "Android Studio", "CloudFlare"]
         }
     ];
 
@@ -282,7 +282,7 @@ const Home = () => {
                                 <a href="https://github.com/Feekkk" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-stone-600 transition-colors">
                                     <Github className="w-6 h-6" />
                                 </a>
-                                <a href="www.linkedin.com/in/wanafiqdanial03" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-stone-600 transition-colors">
+                                <a href="https://www.linkedin.com/in/wanafiqdanial03/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-stone-600 transition-colors">
                                     <Linkedin className="w-6 h-6" />
                                 </a>
                                 <a href="mailto:wanafiq.d03@gmail.com" className="text-gray-600 hover:text-stone-600 transition-colors">
