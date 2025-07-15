@@ -232,3 +232,166 @@
     0 0 120px rgba(234,228,213,0.1),
     inset 0 0 60px rgba(242,242,242,0.1);
 }
+
+/* Smooth Section Transitions */
+.section-transition {
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gradient-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(242, 242, 242, 0) 0%,
+    rgba(234, 228, 213, 0.1) 25%,
+    rgba(212, 197, 166, 0.15) 50%,
+    rgba(182, 176, 159, 0.2) 75%,
+    rgba(162, 154, 139, 0.25) 100%
+  );
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.gradient-overlay.visible {
+  opacity: 1;
+}
+
+/* Enhanced mesh flow for smoother gradients */
+.enhanced-mesh {
+  background: 
+    radial-gradient(ellipse at 20% 20%, rgba(182,176,159,0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(234,228,213,0.4) 0%, transparent 50%),
+    radial-gradient(ellipse at 60% 20%, rgba(242,242,242,0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 40% 80%, rgba(182,176,159,0.2) 0%, transparent 50%),
+    radial-gradient(ellipse at 90% 40%, rgba(234,228,213,0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 10% 60%, rgba(242,242,242,0.2) 0%, transparent 50%),
+    linear-gradient(180deg, 
+      rgba(242, 242, 242, 0.9) 0%, 
+      rgba(234, 228, 213, 0.8) 20%, 
+      rgba(212, 197, 166, 0.7) 40%, 
+      rgba(182, 176, 159, 0.8) 60%, 
+      rgba(162, 154, 139, 0.9) 80%,
+      rgba(142, 134, 125, 1) 100%
+    );
+  background-size: 400% 400%, 400% 400%, 400% 400%, 400% 400%, 400% 400%, 100% 100%;
+  animation: mesh-flow 20s ease-in-out infinite;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+/* Welcome Screen Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulseDot {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes welcomeParticle {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px) scale(0.6);
+  }
+}
+
+.welcome-fade-in {
+  animation: fadeInUp 1s ease-out;
+}
+
+.welcome-slide-in {
+  animation: slideInFromRight 1s ease-out;
+}
+
+.welcome-pulse-dot {
+  animation: pulseDot 2s infinite;
+}
+
+.welcome-particle {
+  animation: welcomeParticle 3s infinite;
+}
+
+/* Add a beautiful cursor trail effect */
+.cursor-trail {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(182,176,159,0.4) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 9999;
+  animation: cursorTrail 1s ease-out forwards;
+}
+
+@keyframes cursorTrail {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+}
+
+/* Welcome screen specific styles */
+.welcome-screen {
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(182,176,159,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(234,228,213,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 60%, rgba(242,242,242,0.05) 0%, transparent 50%),
+    linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+}
+
+.welcome-glow {
+  box-shadow: 
+    0 0 40px rgba(182,176,159,0.3),
+    0 0 80px rgba(234,228,213,0.2),
+    0 0 120px rgba(242,242,242,0.1);
+}
+
+.welcome-text-glow {
+  text-shadow: 
+    0 0 10px rgba(255,255,255,0.3),
+    0 0 20px rgba(182,176,159,0.2),
+    0 0 30px rgba(234,228,213,0.1);
+}

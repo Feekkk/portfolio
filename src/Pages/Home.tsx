@@ -133,7 +133,13 @@ const Home = () => {
                 radial-gradient(circle at 40% 80%, rgba(182,176,159,0.3) 0%, transparent 40%),
                 radial-gradient(circle at 90% 40%, rgba(234,228,213,0.4) 0%, transparent 40%),
                 radial-gradient(circle at 10% 60%, rgba(242,242,242,0.3) 0%, transparent 40%),
-                linear-gradient(135deg, #F2F2F2 0%, #EAE4D5 50%, #B6B09F 100%)
+                linear-gradient(180deg, 
+                    #F2F2F2 0%, 
+                    #EAE4D5 25%, 
+                    #D4C5A6 50%, 
+                    #B6B09F 75%, 
+                    #A29A8B 100%
+                )
             `
         }}>
             {/* Animated Background Orbs */}
@@ -313,8 +319,10 @@ const Home = () => {
             </section>
 
             {/* About Section */}
-            <section id="about" className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6" style={{background: 'linear-gradient(to bottom, #EAE4D5, #B6B09F)'}}>
-                <div className="container mx-auto max-w-6xl">
+            <section id="about" className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 relative">
+                {/* Subtle overlay for smooth transition */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-stone-200/20 to-transparent"></div>
+                <div className="container mx-auto max-w-6xl relative z-10">
                     <div 
                         ref={aboutAnimation.ref}
                         className={`text-center mb-12 lg:mb-16 fade-in-up ${
@@ -443,8 +451,10 @@ const Home = () => {
             </section>
 
             {/* Projects Section */}
-            <section id="projects" className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6" style={{background: '#B6B09F'}}>
-                <div className="container mx-auto max-w-6xl">
+            <section id="projects" className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 relative">
+                {/* Subtle overlay for smooth transition */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-stone-300/20 to-transparent"></div>
+                <div className="container mx-auto max-w-6xl relative z-10">
                     <div 
                         ref={projectsAnimation.ref}
                         className={`text-center mb-12 lg:mb-16 fade-in-up ${
@@ -546,10 +556,12 @@ const Home = () => {
             </section>
 
             {/* Contact Section */}
-            <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6">
+            <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 relative">
+                {/* Subtle overlay for smooth transition */}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-stone-400/15 to-stone-500/20"></div>
                 <div 
                     ref={contactAnimation.ref}
-                    className={`container mx-auto max-w-4xl text-center fade-in-up ${
+                    className={`container mx-auto max-w-4xl text-center fade-in-up relative z-10 ${
                         contactAnimation.isVisible ? 'animate-visible' : ''
                     }`}
                 >
