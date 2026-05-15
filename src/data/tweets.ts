@@ -41,7 +41,7 @@ export interface Profile {
 export const profile: Profile = {
   name: "Wan Afiq",
   handle: "@wanafiq.d",
-  avatar: "/public/profile.jpeg",
+  avatar: "/profile.jpeg",
   banner: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=400&fit=crop",
   bio: "Software Developer for University Kuala Lumpur Royal College of Medicine",
   location: "Ipoh, Perak",
@@ -58,7 +58,7 @@ export const tweets: Tweet[] = [
     author: {
       name: "Wan Afiq",
       handle: "@wanafiq.d",
-      avatar: "/public/profile.jpeg",
+      avatar: "/profile.jpeg",
       verified: true
     },
     content: "Welcome to my Personal Portfolio 🪽 Im passionate about Software, AI, Networking and Cybersecurity \n\nFeels free to scroll down to see the milestone of my careers \n\np/s: This is just a fun project I created for myself, its not associated with any other applications \n\n",
@@ -114,7 +114,7 @@ export const tweets: Tweet[] = [
     author: {
       name: "Wan Afiq",
       handle: "@wanafiq.d",
-      avatar: "/public/profile.jpeg",
+      avatar: "/profile.jpeg",
       verified: true
     },
     content: "My tech stack for 2024:\n\n🎨 Frontend: React + TypeScript + Tailwind + Laravel\n⚡ Backend: Node.js + Express \n🗄️ Database: MySQL + Redis + Postgre\n☁️ Infra: Cloudflare + PLESK \n🤖 AI: OpenAI + Co-Pilot\n\nand excited to learning ASTRO framework",
@@ -139,7 +139,7 @@ export const tweets: Tweet[] = [
     timestamp: "1d",
     media: {
       type: 'image',
-      url: '/public/dean.jpg'
+      url: '/dean.jpg'
     },
     metrics: {
       comments: 89,
@@ -153,14 +153,14 @@ export const tweets: Tweet[] = [
     author: {
       name: "Nexcheck Inventory System",
       handle: "@nexcheck",
-      avatar: "/public/logo-nims.png",
+      avatar: "/logo-nims.png",
       verified: true
     },
     content: "March 2026\n\nI just launch an Inventory System to be used by Information Technology Department 🚀\n\nCheck it out ! 🔗 https://nims.rcmp.edu.my",
     timestamp: "2d",
     media: {
       type: 'image',
-      url: '/public/nims.png'
+      url: '/nims.png'
     },
     metrics: {
       comments: 445,
