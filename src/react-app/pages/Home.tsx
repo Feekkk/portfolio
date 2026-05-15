@@ -13,15 +13,15 @@ export default function HomePage() {
   const [tweetText, setTweetText] = useState("");
 
   return (
-    <div className="min-h-screen bg-black text-white">
-      <div className="max-w-[1400px] mx-auto flex">
+    <div className="min-h-screen bg-black text-white overflow-x-hidden">
+      <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row px-4 sm:px-6">
         {/* Left Sidebar - Navigation */}
-        <aside className="w-[72px] xl:w-[275px] flex-shrink-0 sticky top-0 h-screen border-r border-white/10">
+        <aside className="hidden lg:block w-[72px] xl:w-[275px] flex-shrink-0 sticky top-0 h-screen border-r border-white/10">
           <FeedNav />
         </aside>
 
         {/* Main Feed */}
-        <main className="flex-1 max-w-[600px] border-r border-white/10">
+        <main className="flex-1 w-full min-w-0 lg:max-w-[700px] border-r border-white/10">
           {/* Header */}
           <header className="sticky top-0 z-10 bg-black/80 backdrop-blur-md border-b border-white/10">
             <div className="flex items-center justify-between px-4 py-3">
@@ -68,7 +68,7 @@ export default function HomePage() {
               />
               <div className="flex-1">
                 <textarea
-                  placeholder="What's happening?"
+                  placeholder="Fiq Personal Portfolio"
                   value={tweetText}
                   onChange={(e) => setTweetText(e.target.value)}
                   className="w-full bg-transparent text-xl placeholder-zinc-600 resize-none outline-none min-h-[56px]"

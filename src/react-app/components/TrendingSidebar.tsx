@@ -61,8 +61,8 @@ export default function TrendingSidebar() {
 
       {/* Footer */}
       <div className="px-4 text-xs text-zinc-600">
-        <p>This is a portfolio demo. Not affiliated with X/Twitter.</p>
-        <p className="mt-1">Built with React + TypeScript + Tailwind</p>
+        <p>This is a portfolio demo. Not affiliated with any social media.</p>
+        {/* <p className="mt-1">Built with React + TypeScript + Tailwind</p> */}
       </div>
     </div>
   );
